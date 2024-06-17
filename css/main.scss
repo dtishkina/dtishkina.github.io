@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'header';
+@import 'preview';
+//@import 'about';
+//@import 'services';
+//@import 'gallery';
+
+
+body {
+  font-family: $primary-font;
+  font-size: var(--base-font-size);
+  color: $primary-text-color;
+  background-color: $primary-background-color;
+}
+
+.logo{
+  color: $secondary-text-color;
+}
+
+.primary-button {
+  background-color: $primary-background-color;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 21px 60px;
+  font-size: var(--base-font-size);
+
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+
+
+  &:hover {
+    background-color: $primary-color;
+    color: $contrast-text-color;
+  }
+
+  &:focus{
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  &:active {
+    border: 1px solid $active-color;
+    background-color: $active-color;
+    color: $contrast-text-color;
+  }
+}
