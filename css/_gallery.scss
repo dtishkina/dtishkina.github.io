@@ -1,0 +1,26 @@
+.gallery-container{
+  display: flow;
+  //justify-content: center;
+  //align-content: center;
+
+  .gallery-wrapper{
+    display: flex;
+    max-width: 1140px;
+
+    .gallery-title{
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      h1{
+        font-size: 2em;
+      }
+
+      .chips{
+        margin-left: auto;
+      }
+    }
+  }
+}

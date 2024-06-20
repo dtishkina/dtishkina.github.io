@@ -14,10 +14,10 @@
 
     <div id="header"></div>
     <div id="preview"></div>
+    <div id="gallery"></div>
 
     <!--    <div id="about"></div>-->
-<!--    <div id="services"></div>-->
-<!--    <div id="gallery"></div>-->
+    <!--    <div id="services"></div>-->
 
 
     <script>
@@ -30,6 +30,11 @@
             fetch('sections/preview.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('preview').innerHTML = data);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('sections/gallery.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('gallery').innerHTML = data);
         });
     </script>
 
