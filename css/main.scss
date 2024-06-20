@@ -14,7 +14,7 @@ body {
 }
 
 .logo{
-  color: $secondary-text-color;
+  color: $primary-color;
 }
 
 .primary-button {
@@ -41,5 +41,17 @@ body {
     border: 1px solid $active-color;
     background-color: $active-color;
     color: $contrast-text-color;
+  }
+
+  @media (max-width: 690px) {
+    padding: 18px 51px;
+  }
+
+  @media (max-width: 510px) {
+    padding: 14px 41px;
+  }
+
+  @media (max-width: 480px) {
+      padding: 13px 29px;
   }
 }
