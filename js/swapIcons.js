@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+export const swapIcons = () => {
     const icons = document.querySelectorAll('.icon');
 
     icons.forEach(icon => {
         const iconName = icon.getAttribute('data-icon');
 
-        const defaultIcon = `${iconName}-default.svg`;
-        const hoverIcon = `${iconName}-hover.svg`;
-        const activeIcon = `${iconName}-active.svg`;
+        const defaultIcon = `assets/icons/${iconName}-default.svg`;
+        const hoverIcon = `assets/icons/${iconName}-hover.svg`;
+        const activeIcon = `assets/icons/${iconName}-active.svg`;
 
         const setIcon = (src) => {
             icon.setAttribute('src', src);
@@ -19,4 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.addEventListener('mousedown', () => setIcon(activeIcon));
         icon.addEventListener('mouseup', () => setIcon(defaultIcon));
     });
-});
+};
