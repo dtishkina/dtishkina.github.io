@@ -16,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeDefaultChip();
     });
     loadSection('sections/new_collection.html', 'new_collection');
+    loadSection('sections/about.html', 'about');
 });
