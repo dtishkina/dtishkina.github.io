@@ -1,19 +1,21 @@
 .gallery-container{
-  margin-top: 70px;
+  padding-top: 70px;
   display: flex;
   justify-content: center;
 
   .gallery-wrapper{
     display: flex;
+    flex-direction: column;
     max-width: 1140px;
     width: 100%;
-    padding: 0 39px;
+    padding: 0 15px;
 
     .gallery-title{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      //width: 100%;
+      width: 100%;
+      margin-bottom: 30px;
       overflow-x: auto;
 
       &::-webkit-scrollbar {
@@ -52,7 +54,7 @@
             border: 2px solid $primary-color;
           }
 
-          &:active {
+          &:active, &.active {
             background-color: $active-color;
             color: $contrast-text-color;
             border: 2px solid $active-color;
@@ -62,18 +64,40 @@
     }
 
     .cards{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
     }
 
-  .card {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background-color: $secondary-background-color;
+      padding: 20px 20px 30px 20px;
+
+      .author{
+        color: $secondary-text-color;
+        font-size: 0.9em;
+        margin-top: 20px;
+      }
+
+      .card-title{
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+
+      .description{
+        font-size: 0.9em;
+        margin-top: 8px;
+      }
+
+      .price{
+        margin-top: 30px;
+        font-size: 1.2em;
+        color: $primary-color;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   @media (max-width: 690px) {
@@ -81,7 +105,6 @@
 
       .gallery-wrapper {
         padding: 0 33px;
-
 
         .gallery-title {
           align-items: flex-start;
@@ -104,12 +127,17 @@
 
           }
         }
+
+        .cards{
+          grid-template-columns: repeat(2, minmax(240px, 1fr));
+
+        }
       }
     }
 
 
   @media (max-width: 510px) {
-    margin-top: 30px;
+    padding-top: 30px;
 
     .gallery-wrapper {
       padding: 0 15px;
@@ -132,6 +160,35 @@
           .chip {
             margin-left: 0;
             margin-right: 20px;
+          }
+        }
+      }
+      .cards{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+        .card{
+          padding: 20px 40px;
+
+          .author{
+            font-size: 0.8em;
+            margin-top: 15px;
+          }
+
+          .card-title{
+            font-size: 1.2em;
+            margin-top: 10px;
+          }
+
+          .description{
+            font-size: 0.8em;
+            margin-top: 10px;
+          }
+
+          .price{
+            font-size: 1em;
+            color: $primary-color;
+            margin-top: 30px;
+            margin-bottom: 10px;
           }
         }
       }

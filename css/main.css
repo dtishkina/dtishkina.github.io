@@ -196,7 +196,7 @@ header nav .nav-links li a:active {
   }
 }
 .gallery-container {
-  margin-top: 70px;
+  padding-top: 70px;
   display: flex;
   justify-content: center;
 }
@@ -253,20 +253,33 @@ header nav .nav-links li a:active {
 }
 .gallery-container .gallery-wrapper .cards {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 .gallery-container .gallery-wrapper .card {
+  display: flex;
+  flex-direction: column;
   background-color: #E1EDE6;
-  padding: 20px;
-}
-.gallery-container .gallery-wrapper .card img {
-  width: auto;
+  padding: 20px 20px 30px 20px;
 }
 .gallery-container .gallery-wrapper .card .author {
   color: #86928B;
   font-size: 0.9em;
+  margin-top: 20px;
+}
+.gallery-container .gallery-wrapper .card .card-title {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+.gallery-container .gallery-wrapper .card .description {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+.gallery-container .gallery-wrapper .card .price {
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #598D66;
+  margin-bottom: 20px;
 }
 @media (max-width: 690px) {
   .gallery-container {
@@ -290,10 +303,13 @@ header nav .nav-links li a:active {
     margin-right: 27px;
     margin-left: 0;
   }
+  .gallery-container .gallery-wrapper .cards {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
 }
 @media (max-width: 510px) {
   .gallery-container {
-    margin-top: 30px;
+    padding-top: 30px;
   }
   .gallery-container .gallery-wrapper {
     padding: 0 15px;
@@ -315,6 +331,30 @@ header nav .nav-links li a:active {
   .gallery-container .gallery-wrapper .gallery-title .chips .chip {
     margin-left: 0;
     margin-right: 20px;
+  }
+  .gallery-container .gallery-wrapper .cards {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  .gallery-container .gallery-wrapper .cards .card {
+    padding: 20px 40px;
+  }
+  .gallery-container .gallery-wrapper .cards .card .author {
+    font-size: 0.8em;
+    margin-top: 15px;
+  }
+  .gallery-container .gallery-wrapper .cards .card .card-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  .gallery-container .gallery-wrapper .cards .card .description {
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .gallery-container .gallery-wrapper .cards .card .price {
+    font-size: 1em;
+    color: #598D66;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 }
 
