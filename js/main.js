@@ -15,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeGallery();
         initializeDefaultChip();
     });
+    loadSection('sections/new_collection.html', 'new_collection');
 });
