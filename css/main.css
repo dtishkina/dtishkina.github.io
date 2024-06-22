@@ -205,12 +205,13 @@ header nav .nav-links li a:active {
   flex-direction: column;
   max-width: 1140px;
   width: 100%;
-  padding: 0 39px;
+  padding: 0 15px;
 }
 .gallery-container .gallery-wrapper .gallery-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   margin-bottom: 30px;
   overflow-x: auto;
 }
@@ -245,24 +246,23 @@ header nav .nav-links li a:active {
   color: #2C2D35;
   border: 2px solid #598D66;
 }
-.gallery-container .gallery-wrapper .gallery-title .chips .chip:active {
+.gallery-container .gallery-wrapper .gallery-title .chips .chip:active, .gallery-container .gallery-wrapper .gallery-title .chips .chip.active {
   background-color: #376B44;
   color: #F4F6F5;
   border: 2px solid #376B44;
 }
 .gallery-container .gallery-wrapper .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   flex-wrap: wrap;
   gap: 30px;
 }
 .gallery-container .gallery-wrapper .card {
   background-color: #E1EDE6;
-  width: 334px;
-  height: 730px;
   padding: 20px;
 }
 .gallery-container .gallery-wrapper .card img {
-  width: 290px;
+  width: auto;
 }
 .gallery-container .gallery-wrapper .card .author {
   color: #86928B;

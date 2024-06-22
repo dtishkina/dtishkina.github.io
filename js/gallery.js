@@ -28,6 +28,7 @@ export const initializeGallery = () => {
 
     document.querySelectorAll('.chip').forEach(chip => {
         chip.addEventListener('click', function() {
+
             const category = this.dataset.category;
             const cardsContainer = document.getElementById('cards-container');
             cardsContainer.innerHTML = '';
@@ -47,4 +48,12 @@ export const initializeGallery = () => {
             });
         });
     });
+};
+
+export const initializeDefaultChip = () => {
+    const defaultChip = document.querySelector('.chip[data-category="france"]');
+    if (defaultChip) {
+        defaultChip.classList.add('active');
+        defaultChip.click();
+    }
 };
