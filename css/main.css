@@ -202,6 +202,7 @@ header nav .nav-links li a:active {
 }
 .gallery-container .gallery-wrapper {
   display: flex;
+  flex-direction: column;
   max-width: 1140px;
   width: 100%;
   padding: 0 39px;
@@ -210,6 +211,7 @@ header nav .nav-links li a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
   overflow-x: auto;
 }
 .gallery-container .gallery-wrapper .gallery-title::-webkit-scrollbar {
@@ -251,14 +253,20 @@ header nav .nav-links li a:active {
 .gallery-container .gallery-wrapper .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 .gallery-container .gallery-wrapper .card {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: #E1EDE6;
+  width: 334px;
+  height: 730px;
   padding: 20px;
-  width: 200px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.gallery-container .gallery-wrapper .card img {
+  width: 290px;
+}
+.gallery-container .gallery-wrapper .card .author {
+  color: #86928B;
+  font-size: 0.9em;
 }
 @media (max-width: 690px) {
   .gallery-container {
@@ -322,7 +330,7 @@ body {
 }
 
 .primary-button {
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #598D66;
   border: 1px solid #598D66;
   padding: 21px 60px;
