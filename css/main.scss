@@ -3,7 +3,8 @@
 @import 'preview';
 @import 'gallery';
 @import 'new_collection';
-@import "about";
+@import 'about';
+@import 'footer';
 
 body {
   font-family: $primary-font;
@@ -55,7 +56,6 @@ body {
   }
 }
 
-
 .secondary-button {
   background-color: #EEDB6D;
   color: $primary-text-color;
@@ -86,5 +86,23 @@ body {
 
   @media (max-width: 510px) {
     padding: 14px 35px;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: $primary-text-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:focus {
+    background: $secondary-color;
+    color: $primary-text-color;
+  }
+
+  &:active {
+    color: $active-color;
   }
 }
