@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     loadSection('sections/new_collection.html', 'new_collection');
     loadSection('sections/about.html', 'about');
-    loadSection('sections/footer.html', 'footer');
+    loadSection('sections/footer.html', 'footer', smoothScroll);
 });
