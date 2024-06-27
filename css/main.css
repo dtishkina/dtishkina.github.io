@@ -643,6 +643,17 @@ body {
   background-color: #FFFFFF;
 }
 
+div,
+button:focus,
+button:active,
+button:hover,
+a:focus,
+a:active,
+a:hover,
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .logo {
   color: #598D66;
 }
