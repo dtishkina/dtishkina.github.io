@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "deploy": "gh-pages -d build",
+  "homepage": "https://dtishkina.github.io/house-project"
+}
