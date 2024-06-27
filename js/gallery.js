@@ -29,9 +29,13 @@ export const initializeGallery = () => {
     document.querySelectorAll('.chip').forEach(chip => {
         chip.addEventListener('click', function() {
 
+            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+
             const category = this.dataset.category;
             const cardsContainer = document.getElementById('cards-container');
             cardsContainer.innerHTML = '';
+
 
             cardsData[category].forEach(card => {
                 const cardElement = document.createElement('div');
@@ -53,7 +57,6 @@ export const initializeGallery = () => {
 export const initializeDefaultChip = () => {
     const defaultChip = document.querySelector('.chip[data-category="france"]');
     if (defaultChip) {
-        defaultChip.classList.add('active');
         defaultChip.click();
     }
 };
