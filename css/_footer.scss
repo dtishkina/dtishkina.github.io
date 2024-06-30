@@ -1,0 +1,152 @@
+footer{
+  background-color: $secondary-background-color;
+  padding: 23px 39px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  p{
+    color: $secondary-text-color;
+    font-size: 0.9em;
+  }
+
+  .icon{
+    color: $primary-text-color;
+
+    &:hover{
+      color: $primary-color;
+    }
+
+    &:focus{
+      background-color: $secondary-color;
+      color: $primary-color
+    }
+
+    &:active {
+      color: $active-color;
+    }
+  }
+
+  .logo{
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1140px;
+    width: 100%;
+  }
+
+  .contact{
+    line-height: 21px;
+
+    h1{
+      margin-bottom: 10px;
+    }
+  }
+
+  .info{
+    display: flex;
+    gap: 60px;
+    width: 445px;
+    margin-left: auto;
+
+    .tag{
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      line-height: 27px;
+    }
+
+  }
+
+  .media{
+    margin-left: auto;
+
+    .icons{
+      display: flex;
+      gap: 30px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      font-size: 0.6em;
+      line-height: 14px;
+      margin-bottom: 6px;
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact{
+      display: flex;
+      margin-bottom: 30px;
+
+      .contacts{
+        margin-left: auto;
+      }
+    }
+
+    .info{
+      margin-left: unset;
+      flex: content;
+    }
+
+    .media{
+      margin-left: auto;
+      margin-top: 30px;
+      margin-right: 77px;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-line{
+      width: 100%;
+      height: 1px;
+      background-color: #C3D1C6;
+      margin: 16px 0;
+    }
+
+    .info{
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .media{
+      position: unset;
+      z-index: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 510px) {
+    .contact{
+      flex-direction: column;
+      .contacts{
+        margin-left: unset;
+      }
+    }
+
+    .info{
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+

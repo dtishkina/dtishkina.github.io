@@ -1,0 +1,45 @@
+$primary-color: #598D66;
+$secondary-color: #D4E8D9;
+$active-color: #376B44;
+
+$primary-text-color: #2C2D35;
+$secondary-text-color: #86928B;
+$contrast-text-color: #F4F6F5;
+
+$primary-background-color: #FFFFFF;
+$secondary-background-color: #E1EDE6;
+
+$primary-font: "Raleway", sans-serif;
+
+:root {
+  --base-font-size: 20px;
+  --heading-font-size: 2 rem;
+  --body-font-size: 0.9rem;  // 18px
+  --card-font-size: 1.5 rem; // 30px
+  --price-font-size: 1.2rem;  // 24px
+  --small-font-size: 0.6rem;  // 12px
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --base-font-size: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  :root {
+    --base-font-size: 18px;
+  }
+}
+
+@media (max-width: 510px) {
+  :root {
+    --base-font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --base-font-size: 18px;
+  }
+}

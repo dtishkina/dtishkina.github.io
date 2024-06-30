@@ -1,0 +1,120 @@
+@import 'variables';
+@import 'header';
+@import 'preview';
+@import 'gallery';
+@import 'new_collection';
+@import 'about';
+@import 'footer';
+
+body {
+  font-family: $primary-font;
+  font-size: var(--base-font-size);
+  color: $primary-text-color;
+  background-color: $primary-background-color;
+}
+
+div,
+button:focus,
+button:active,
+button:hover,
+a:focus,
+a:active,
+a:hover,
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.logo{
+  color: $primary-color;
+}
+
+.primary-button {
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 21px 60px;
+  font-size: var(--base-font-size);
+
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+
+
+  &:hover {
+    background-color: $primary-color;
+    color: $contrast-text-color;
+  }
+
+  &:focus{
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  &:active {
+    border: 1px solid $active-color;
+    background-color: $active-color;
+    color: $contrast-text-color;
+  }
+
+  @media (max-width: 690px) {
+    padding: 18px 51px;
+  }
+
+  @media (max-width: 510px) {
+    padding: 14px 41px;
+  }
+
+  @media (max-width: 480px) {
+      padding: 13px 29px;
+  }
+}
+
+.secondary-button {
+  background-color: #EEDB6D;
+  color: $primary-text-color;
+  border: 1px solid #EEDB6D;
+  padding: 21px 60px;
+  font-size: var(--base-font-size);
+
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+
+  &:hover {
+    background-color: #FAEB97;
+    border: 1px solid #FAEB97;
+  }
+
+  &:focus{
+    background-color: #FAEB97;
+    border: 1px solid #A38314;
+  }
+
+  &:active {
+    border: 1px solid #D9B949;
+    background-color: #D9B949;
+  }
+
+  @media (max-width: 690px) {
+    padding: 18px 36px;
+  }
+
+  @media (max-width: 510px) {
+    padding: 14px 35px;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: $primary-text-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:focus {
+    background: $secondary-color;
+    color: $primary-text-color;
+  }
+
+  &:active {
+    color: $active-color;
+  }
+}

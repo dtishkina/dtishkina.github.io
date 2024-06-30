@@ -1,0 +1,11 @@
+.collection-container {
+  position: relative;
+  background-image: url("/assets/promo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=new_collection.css.map */

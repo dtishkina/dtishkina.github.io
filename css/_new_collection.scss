@@ -1,0 +1,94 @@
+.collection-container{
+  position: relative;
+  background-image: url("/assets/pic_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $contrast-text-color;
+  padding: 70px 39px;
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+
+  .content-wrapper {
+    max-width: 1140px;
+    width: 100%;
+
+    .heading {
+      display: flex;
+      align-items: center;
+      width: 50%;
+
+      img{
+        width: 80px;
+        margin-right: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+        line-height: 40px;
+
+      }
+    }
+
+    .content{
+      width: 50%;
+
+      font-size: 0.9em;
+      line-height: 27px;
+
+      margin-top: 20px;
+      margin-bottom: 60px;
+
+      p{
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 690px) {
+    .content-wrapper{
+      .heading{
+        width: 80%;
+
+        img{
+          width: 60px;
+        }
+
+        h1{
+          font-size: 1.5em;
+        }
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 510px) {
+    padding: 50px 33px;
+    margin-top: 50px;
+
+    .content-wrapper{
+      .heading{
+        width: 80%;
+
+        img{
+          width: 50px;
+        }
+
+        h1{
+          font-size: 1.2em;
+        }
+      }
+
+      .content {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
